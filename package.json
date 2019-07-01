@@ -1,5 +1,5 @@
 {
-  "name": "vanilla-coding-async",
+  "name": "async",
   "description": "Higher-order functions and common patterns for asynchronous code",
   "version": "1.0.0",
   "author": "Ken Huh <ken@vanillacoding.co>",
