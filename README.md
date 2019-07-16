@@ -5,15 +5,19 @@
 ## Set up
 
 ```sh
-npm install
+yarn install (npm install)
 ```
 
 ## Development
 
-1. `npm test`를 실행해보세요. 테스트들이 실패하고 있죠?
+```sh
+yarn test (npm test)
+```
+
+1. 테스트들이 실패하고 있죠?
 2. 테스트가 실패하고 있는 함수 파일을 `lib` 디렉토리에서 찾아 차근차근 구현을 시작해보세요.
-3. 함수에 대한 설명은 [async](http://caolan.github.io/async/docs.html)를 참고하세요.
-4. `each`를 먼저 진행하시고, 그 다음 함수의 테스트 파일을 찾아 `describe.skip`이라고 되어 있는 부분을 `describe`로 수정하시고 진행하시면 됩니다. 하나의 함수에 대한 테스트를 통과시켰다면, 다음 함수의 테스트 파일을 찾아 똑같이 반복하며 진행하시면 됩니다.
+3. 함수에 대한 설명은 각 함수 파일에 있는 주석이나 [async](http://caolan.github.io/async/docs.html)를 참고하세요.
+4. `each`를 먼저 진행하시고, 그 다음 함수 테스트 파일(`/mocha_test`)을 찾아 `describe.skip`이라고 되어 있는 부분을 모두 `describe`로 수정하시고 진행하시면 됩니다.
 5. **`lib/internal` 디렉토리는 수정하지 마세요.**
 
 ## Keep in mind
