@@ -20,6 +20,10 @@ yarn test (npm test)
 4. `each`를 먼저 진행하시고, 그 다음 함수 테스트 파일(`/mocha_test`)을 찾아 `describe.skip`이라고 되어 있는 부분을 모두 `describe`로 수정하시고 진행하시면 됩니다.
 5. **`lib/internal` 디렉토리는 수정하지 마세요.**
 
+## Reference Documentations
+
+- [AsyncFunction()](https://caolan.github.io/async/v3/global.html) (반드시 읽어보세요.)
+
 ## Keep in mind
 
 - 기본적으로 본인이 구현해야 하는 함수가 어떤 기능을 하는건지에 대한 이해는 물론 선행되어야 합니다. ([async](http://caolan.github.io/async/docs.html) 참고)

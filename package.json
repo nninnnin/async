@@ -6,10 +6,7 @@
   "homepage": "https://www.vanillacoding.co",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vanilla-coding/async.git"
-  },
-  "bugs": {
-    "url": "https://github.com/vanilla-coding/async/issues"
+    "url": "https://gitlab.com/vanilla-coding/bootcamp/foundations/async"
   },
   "dependencies": {
     "lodash": "^4.14.0",
