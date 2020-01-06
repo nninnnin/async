@@ -4,6 +4,8 @@
 
 ## Set up
 
+node.js를 설치 안하셨다면, 먼저 설치하신 후 아래 명령어를 실행하셔야 합니다.
+
 ```sh
 yarn install (npm install)
 ```
