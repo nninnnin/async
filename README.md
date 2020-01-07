@@ -2,6 +2,10 @@
 
 [async](http://caolan.github.io/async/v3/) 라이브러리 함수들을 직접 구현해보는 과제입니다.
 
+## Restrictions
+
+- Promise, async/await는 사용하지 마세요.
+
 ## Set up
 
 - [node.js](https://nodejs.org/en/)를 설치 안하셨다면, 먼저 설치하신 후 아래 명령어를 실행하셔야 합니다.
