@@ -1,5 +1,5 @@
-var async = require("../lib");
-var expect = require("chai").expect;
+const async = require("../lib");
+const expect = require("chai").expect;
 
 describe.skip("every", function () {
   it("true", function (done) {
@@ -35,7 +35,7 @@ describe.skip("every", function () {
   });
 
   it("early return - 중간에 false값을 받았다면, 최종 콜백이 실행되어야 한다. 그리고 최종 콜백은 다시 실행되어서는 안된다.", function (done) {
-    var call_order = [];
+    const call_order = [];
     async.every(
       [1, 2, 3],
       function (x, callback) {

@@ -1,7 +1,7 @@
-var async = require("../lib");
-var expect = require("chai").expect;
-var assert = require("assert");
-var db = {
+const async = require("../lib");
+const expect = require("chai").expect;
+const assert = require("assert");
+const db = {
   userId1: { age: 30 },
   userId2: { age: 42 },
   userId3: { age: 30 },

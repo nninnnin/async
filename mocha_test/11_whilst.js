@@ -1,6 +1,6 @@
-var async = require("../lib");
-var expect = require("chai").expect;
-var count = 0;
+const async = require("../lib");
+const expect = require("chai").expect;
+let count = 0;
 
 describe.skip("whilst", function () {
   this.timeout(10000);

@@ -1,10 +1,10 @@
-var async = require("../lib");
-var expect = require("chai").expect;
-var assert = require("assert");
+const async = require("../lib");
+const expect = require("chai").expect;
+const assert = require("assert");
 
 describe.skip("reduce", function () {
   it("reduce 1", function (done) {
-    var call_order = [];
+    const call_order = [];
     async.reduce(
       [1, 2, 3],
       0,
@@ -22,7 +22,7 @@ describe.skip("reduce", function () {
   });
 
   it("reduce 2", function (done) {
-    var call_order = [];
+    const call_order = [];
     async.reduce(
       [10, 20, 30],
       1,

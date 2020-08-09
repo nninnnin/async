@@ -1,9 +1,9 @@
-var async = require("../lib");
-var expect = require("chai").expect;
-var assert = require("assert");
+const async = require("../lib");
+const expect = require("chai").expect;
+const assert = require("assert");
 
 describe.skip("times", function () {
-  var createUser = function (id, callback) {
+  const createUser = function (id, callback) {
     callback(null, {
       id: "user" + id,
     });

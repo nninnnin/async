@@ -1,5 +1,5 @@
-var async = require("../lib");
-var expect = require("chai").expect;
+const async = require("../lib");
+const expect = require("chai").expect;
 
 describe.skip("some", function () {
   it("some true", function (done) {
@@ -35,7 +35,7 @@ describe.skip("some", function () {
   });
 
   it("some early return - 최종 콜백은 단 한번만 실행되어야 한다.", function (done) {
-    var call_order = [];
+    const call_order = [];
     async.some(
       [1, 2, 3],
       function (x, callback) {

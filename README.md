@@ -1,11 +1,15 @@
 # Async
 
-[async](http://caolan.github.io/async/v3/) 라이브러리 함수들을 직접 구현해보는 과제입니다.
+비동기 관련 유틸리티 함수들을 직접 구현해보는 과제입니다.
+
+- 10-13번까지는 [async](http://caolan.github.io/async/v3/) 라이브러리의 동일한 기능을 구현해보는 과제이며,
+- 14-15번은 Promise 관련 기능을 구현해보는 과제입니다.
 
 ## Restrictions
 
 - **⛔️ 모든 변수 선언은 `var`를 이용하세요.**
-- **⛔️ 특별한 언급이 없는 한, `Promise`, `async/await`은 사용할 수 없습니다.**
+- **⛔️ (14, 15번 제외) `Promise` 관련 기능은 사용할 수 없습니다.**
+- **⛔️ (전체) `async/await`은 사용할 수 없습니다.**
 
 ## Set up
 
@@ -17,7 +21,7 @@ npm install
 
 ## Development
 
-- 과제 디렉토리 내에서 아래 명령어를 실행하셔야 합니다.
+- 터미널에서 과제 디렉토리로 이동한 후, 아래 명령어를 실행하셔야 합니다.
 
 ```sh
 npm test

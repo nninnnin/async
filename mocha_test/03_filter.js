@@ -1,5 +1,5 @@
-var async = require("../lib");
-var expect = require("chai").expect;
+const async = require("../lib");
+const expect = require("chai").expect;
 
 function filterIteratee(x, callback) {
   setTimeout(function () {
@@ -17,7 +17,7 @@ describe.skip("filter", function () {
   });
 
   it("filter original untouched - 원본 배열은 수정되지 않아야 한다.", function (done) {
-    var a = [3, 1, 2];
+    const a = [3, 1, 2];
     async.filter(
       a,
       function (x, callback) {

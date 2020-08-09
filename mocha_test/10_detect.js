@@ -1,5 +1,5 @@
-var async = require("../lib");
-var expect = require("chai").expect;
+const async = require("../lib");
+const expect = require("chai").expect;
 
 function detectIteratee(x, callback) {
   setTimeout(function () {

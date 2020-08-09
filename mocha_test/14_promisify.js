@@ -1,5 +1,5 @@
-var async = require("../lib");
-var assert = require("assert");
+const async = require("../lib");
+const assert = require("assert");
 
 describe.skip("promisify", function () {
   function noop () {}

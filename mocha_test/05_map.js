@@ -1,6 +1,6 @@
-var async = require("../lib");
-var expect = require("chai").expect;
-var assert = require("assert");
+const async = require("../lib");
+const expect = require("chai").expect;
+const assert = require("assert");
 
 describe.skip("map", function () {
   function mapIteratee(call_order, x, callback) {
@@ -11,7 +11,7 @@ describe.skip("map", function () {
   }
 
   it("basic", function (done) {
-    var call_order = [];
+    const call_order = [];
     async.map([1, 3, 2], mapIteratee.bind(this, call_order), function (
       err,
       results
@@ -24,7 +24,7 @@ describe.skip("map", function () {
   });
 
   it("map original untouched - 원본 배열은 수정되어서는 안된다.", function (done) {
-    var a = [1, 2, 3];
+    const a = [1, 2, 3];
     async.map(
       a,
       function (x, callback) {

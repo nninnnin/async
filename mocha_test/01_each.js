@@ -1,6 +1,6 @@
-var async = require("../lib");
-var expect = require("chai").expect;
-var assert = require("assert");
+const async = require("../lib");
+const expect = require("chai").expect;
+const assert = require("assert");
 
 describe.skip("each", function () {
   function eachIteratee(args, x, callback) {
@@ -11,7 +11,7 @@ describe.skip("each", function () {
   }
 
   it("each", function (done) {
-    var args = [];
+    const args = [];
     async.each([1, 3, 2], eachIteratee.bind(this, args), function (err) {
       assert(err === null, err + " passed instead of 'null'");
       expect(args).to.eql([1, 2, 3]);
