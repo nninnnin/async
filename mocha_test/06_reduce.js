@@ -55,26 +55,6 @@ describe.skip("reduce", function () {
     );
   });
 
-  it("reduce object", function (done) {
-    async.reduce(
-      {
-        a: { value: 1 },
-        b: { value: 2 },
-        c: { value: 3 },
-      },
-      0,
-      function (a, x, callback) {
-        setTimeout(function () {
-          callback(null, a + x.value);
-        }, Math.random() * 100);
-      },
-      function (err, result) {
-        expect(result).to.equal(6);
-        done();
-      }
-    );
-  });
-
   it("reduce error", function (done) {
     async.reduce(
       [1, 2, 3],

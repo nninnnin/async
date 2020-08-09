@@ -31,7 +31,7 @@ npm test
 
 ## References
 
-- [AsyncFunction()](https://caolan.github.io/async/v3/global.html) 문서를 반드시 읽어보세요.
+- [AsyncFunction()](https://caolan.github.io/async/v3/global.html) 문서를 반드시 읽어보세요. (특히 에러 관련 사항을 자세히 읽어보세요.)
 
 ## Keep in mind
 

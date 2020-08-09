@@ -32,22 +32,6 @@ describe.skip("filter", function () {
     );
   });
 
-  it("filter collection - 객체에 대응할 수 있어야 한다.", function (done) {
-    var a = { a: 3, b: 1, c: 2 };
-    async.filter(
-      a,
-      function (x, callback) {
-        callback(null, x % 2);
-      },
-      function (err, results) {
-        expect(err).to.equal(null);
-        expect(results).to.eql([3, 1]);
-        expect(a).to.eql({ a: 3, b: 1, c: 2 });
-        done();
-      }
-    );
-  });
-
   it("filter error", function (done) {
     async.filter(
       [3, 1, 2],

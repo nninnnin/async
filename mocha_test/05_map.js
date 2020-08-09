@@ -50,41 +50,4 @@ describe.skip("map", function () {
     );
     setTimeout(done, 50);
   });
-
-  it("map undefined array - undefined가 배열 대신 들어왔을 경우, 최종 콜백에 빈 배열을 결과값으로 돌려주어야 한다.", function (done) {
-    async.map(
-      undefined,
-      function (x, callback) {
-        callback();
-      },
-      function (err, result) {
-        expect(err).to.equal(null);
-        expect(result).to.eql([]);
-      }
-    );
-    setTimeout(done, 50);
-  });
-
-  it("map object - 객체에 대응할 수 있어야 한다.", function (done) {
-    async.map(
-      {
-        a: 1,
-        b: 2,
-        c: 3,
-      },
-      function (val, callback) {
-        callback(null, val * 2);
-      },
-      function (err, result) {
-        if (err) throw err;
-        expect(Object.prototype.toString.call(result)).to.equal(
-          "[object Array]"
-        );
-        expect(result).to.contain(2);
-        expect(result).to.contain(4);
-        expect(result).to.contain(6);
-        done();
-      }
-    );
-  });
 });
