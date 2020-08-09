@@ -38,6 +38,7 @@ describe("each", function () {
     async.each(
       [1, 2, 3],
       function (x, callback) {
+        // NOTE: Anything other than `undefined` is considered as an error.
         callback("error");
       },
       function (err) {
