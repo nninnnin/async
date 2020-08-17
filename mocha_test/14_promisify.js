@@ -64,8 +64,8 @@ describe.skip("promisify", function () {
     const fn = async.promisify(doSomethingComplicatedAsync);
 
     return fn(10, 2, 5)
-      .then(function () {
-        assert(result === 50, "result should be 10 times n");
+      .then(function (result) {
+        assert(result === 25, "result should be 10 times n");
       })
       .catch(function () {
         assert(false, "should not be called.");
