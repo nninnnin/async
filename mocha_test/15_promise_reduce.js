@@ -4,7 +4,7 @@ describe("promise reduce", function () {
   this.timeout(30000);
 
   function addTenAsync (n) {
-    return new Promise(function (resolve, reject) { // 반환되는 순간 실행 (executor)
+    return new Promise(function (resolve, reject) {
       setTimeout(function () {
         if (n > 10) return reject("error");
         resolve(n + 10);
@@ -28,7 +28,6 @@ describe("promise reduce", function () {
     });
   });
 
-  // 13, 10, 12, 15
   it("base case 2 without initial value", async function () {
     return Promise.reduce([3, 0, 2, 5], function (acc, number) {
       return addTenAsync(number).then(result => {

@@ -16,6 +16,14 @@ describe("filter", function () {
     });
   });
 
+  it("filter - custom test to check the order of elems", function (done) {
+    async.filter([3, 2, 1], filterIteratee, function (err, results) {
+      expect(err).to.equal(null);
+      expect(results).to.eql([3, 1]);
+      done();
+    });
+  });
+
   it("filter original untouched - 원본 배열은 수정되지 않아야 한다.", function (done) {
     const a = [3, 1, 2];
     async.filter(
