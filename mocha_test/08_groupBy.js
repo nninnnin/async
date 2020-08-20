@@ -14,7 +14,7 @@ const db = {
   },
 };
 
-describe.skip("groupBy", function () {
+describe("groupBy", function () {
   it("groupBy", function (done) {
     async.groupBy(
       ["userId1", "userId2", "userId3"],

@@ -3,11 +3,11 @@ const expect = require("chai").expect;
 
 function detectIteratee(x, callback) {
   setTimeout(function () {
-    callback(null, x % 2);
-  }, (10 - x) * 10);
+    callback(null, x % 2); // 홀수가 true
+  }, (10 - x) * 10); // x 값이 클수록 빨리 콜백이 실행된다!
 }
 
-describe.skip("detect", function () {
+describe("detect", function () {
   it("detect - truth 테스트를 통과한 첫번째 값만 즉시 반환한다.", function (done) {
     async.detect([1, 2, 5], detectIteratee, function (err, results) {
       expect(err).to.equal(null);

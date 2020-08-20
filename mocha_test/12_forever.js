@@ -2,7 +2,7 @@ const async = require("../lib");
 const expect = require("chai").expect;
 let count = 0;
 
-describe.skip("forever", function () {
+describe("forever", function () {
   it("forever", function (done) {
     async.forever(
       function (next) {

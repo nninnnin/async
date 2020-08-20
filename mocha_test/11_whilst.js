@@ -2,8 +2,8 @@ const async = require("../lib");
 const expect = require("chai").expect;
 let count = 0;
 
-describe.skip("whilst", function () {
-  this.timeout(10000);
+describe("whilst", function () {
+  this.timeout(10000); // 비동기 시행을 최대로 기다리는 시간
 
   it("basics", function (done) {
     async.whilst(

@@ -1,7 +1,7 @@
 const async = require("../lib");
 const assert = require("assert");
 
-describe.skip("promisify", function () {
+describe("promisify", function () {
   function noop () {}
 
   function doSomethingAsync (n, callback) {
