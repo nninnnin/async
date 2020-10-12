@@ -65,7 +65,7 @@ describe("every", function () {
       function (err, result) { // 최종콜백
         expect(err).to.equal("error");
         expect(result).to.not.exist; // use to detect `undefined` or `null`
-        done();
+        done(); // 왜 얘는 여러번 호출되는거야?
       }
     );
   });

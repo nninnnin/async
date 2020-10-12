@@ -1,7 +1,7 @@
 const async = require("../lib");
 const expect = require("chai").expect;
 
-describe.skip("some", function () {
+describe("some", function () {
   it("some true", function (done) {
     async.some(
       [3, 1, 2],

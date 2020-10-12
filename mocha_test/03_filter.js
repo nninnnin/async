@@ -3,11 +3,11 @@ const expect = require("chai").expect;
 
 function filterIteratee(x, callback) {
   setTimeout(function () {
-    callback(null, x % 2);
+    callback(null, x % 2); // 짝수라면 false, 홀수라면 true
   }, x * 5);
 }
 
-describe.skip("filter", function () {
+describe("filter", function () {
   it("filter", function (done) {
     async.filter([3, 1, 2], filterIteratee, function (err, results) {
       expect(err).to.equal(null);

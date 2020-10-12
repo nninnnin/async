@@ -2,12 +2,12 @@ const async = require("../lib");
 const expect = require("chai").expect;
 const assert = require("assert");
 
-describe.skip("map", function () {
+describe("map", function () {
   function mapIteratee(call_order, x, callback) {
     setTimeout(function () {
-      call_order.push(x);
-      callback(null, x * 2);
-    }, x * 25);
+      call_order.push(x); // 결과적으로 '숫자 크기대로' 콜백이 실행되어 call_order에 들어가게 되는데..
+      callback(null, x * 2); // 
+    }, x * 25);// 1은 25초, 3은 75초, 2는 50초 뒤 실행된다
   }
 
   it("basic", function (done) {

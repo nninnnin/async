@@ -2,7 +2,7 @@ const async = require("../lib");
 const expect = require("chai").expect;
 const assert = require("assert");
 
-describe.skip("reduce", function () {
+describe("reduce", function () {
   it("reduce 1", function (done) {
     const call_order = [];
     async.reduce(
