@@ -1,7 +1,7 @@
 const async = require("../lib");
 const expect = require("chai").expect;
 
-describe.skip("every", function () {
+describe("every", function () {
   it("true", function (done) {
     async.every(
       [1, 2, 3],
@@ -23,7 +23,7 @@ describe.skip("every", function () {
       [1, 2, 3],
       function (x, callback) {
         setTimeout(function () {
-          callback(null, x % 2);
+          callback(null, x % 2); // '홀수라면 true, 짝수라면 false'
         }, 0);
       },
       function (err, result) {
@@ -42,7 +42,7 @@ describe.skip("every", function () {
         setTimeout(function () {
           call_order.push(x);
           callback(null, x === 1);
-        }, x * 5);
+        }, x * 5); // 5초, 10초, 15초 = 도합 25초
       },
       function () {
         call_order.push("callback");
@@ -59,12 +59,12 @@ describe.skip("every", function () {
       [1, 2, 3],
       function (x, callback) {
         setTimeout(function () {
-          callback("error");
+          callback("error"); // 바로 에러. result는 없다
         }, 0);
       },
-      function (err, result) {
+      function (err, result) { // 최종콜백
         expect(err).to.equal("error");
-        expect(result).to.not.exist;
+        expect(result).to.not.exist; // use to detect `undefined` or `null`
         done();
       }
     );

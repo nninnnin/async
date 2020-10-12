@@ -2,20 +2,22 @@ const async = require("../lib");
 const expect = require("chai").expect;
 const assert = require("assert");
 
-describe.skip("each", function () {
+describe("each", function () { // test suite를 작성.
+  // 원소 각각에 적용시킬 함수
   function eachIteratee(args, x, callback) {
     setTimeout(function () {
       args.push(x);
       callback();
     }, x * 25);
   }
-
+  // it로 test 작성
   it("each", function (done) {
     const args = [];
+    // 두번째 인자처럼 bind하면 첫번째 args는 고정된 채 두, 세번째 매개변수만 채워주면 실행되는 함수로 바뀐다. (즉 해당 함수에 할당되는 것은 이제 x, callback 인 것이다)
     async.each([1, 3, 2], eachIteratee.bind(this, args), function (err) {
       assert(err === null, err + " passed instead of 'null'");
       expect(args).to.eql([1, 2, 3]);
-      done();
+      done(); // 모든 비동기 시행이 완료되었음을 테스트 (it)에 알린다.
     });
   });
 
